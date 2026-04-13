@@ -36,9 +36,41 @@ def read_data(file_name,field):
 
     return data.get(field)
 
+def linear_search(sekvence, cislo):
+    positions = []
+
+    for index, value in enumerate(sekvence):
+        if value == cislo:
+            positions.append(index)
+
+    return {"positions": positions, "count": len(positions)}
+
+def binary_search(sekvence, cislo):
+    left = 0
+    right = len(sekvence) -1
+
+    while left <= right:
+        mid = (left + right) // 2
+
+        if sekvence[mid] == cislo:
+            return mid
+
+        elif sekvence[mid] < cislo:
+            left = mid + 1
+
+        else:
+            right = mid - 1
+
+    return None
+
+
+def pattern_search()
 
 def main():
-    pass
+        sequential_data = read_data("sequential.json", "unordered_numbers")
+        target = 5
+        linear_result = linear_search(sequential_data, target)
+        print(linear_result)
 
 
 if __name__ == "__main__":
