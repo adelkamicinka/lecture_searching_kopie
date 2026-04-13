@@ -22,6 +22,14 @@ def read_data(file_name, field):
     
     file_path = cwd_path / file_name
 
+import json
+
+def read_data(file_name,field):
+    with open(file_name, "r", encoding= "utf-8") as file:
+        data = json.load(file)
+
+    return data.get(field)
+
 
 def main():
     pass
