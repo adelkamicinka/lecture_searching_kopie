@@ -25,6 +25,12 @@ def read_data(file_name, field):
 import json
 
 def read_data(file_name,field):
+    with open("sequential.json", "r", encoding= "utf-8") as file:
+        soubor = json.load(file)
+
+    if field not in soubor:
+        return None
+
     with open(file_name, "r", encoding= "utf-8") as file:
         data = json.load(file)
 

@@ -1,5 +1,10 @@
+from searching import read_data
+
+
 def main():
-    print("Hello from lecture-searching-kopie!")
+    sequential_data = read_data("sequential.json", "unordered_numbers")
+    print(sequential_data)
+
 
 
 
